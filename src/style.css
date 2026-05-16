@@ -720,11 +720,37 @@ body:has(.btn:hover, a:hover, button:hover) .cursor-ring {
 .package-desc { font-size: 0.85rem; color: var(--on-surface-variant); line-height: 1.6; margin-bottom: 20px; }
 .package-price { font-size: 1.8rem; font-weight: 700; margin-bottom: 24px; }
 .package-price span { font-size: 0.9rem; color: var(--on-surface-variant); font-weight: 400; }
-.package-features { margin-bottom: 32px; }
-.package-features li { padding: 8px 0; font-size: 0.85rem; color: var(--on-surface-variant); display: flex; align-items: flex-start; gap: 8px; }
-.package-features li.included::before { content: '✓'; color: #10b981; font-weight: 700; flex-shrink: 0; }
-.package-features li.not-included { opacity: 0.4; }
-.package-features li.not-included::before { content: '✕'; color: var(--on-surface-variant); font-weight: 700; flex-shrink: 0; }
+.package-features { margin-bottom: 32px; list-style: none; padding: 0; }
+.package-features li { padding: 9px 0; font-size: 0.875rem; color: var(--on-surface); display: flex; align-items: center; gap: 12px; line-height: 1.4; }
+.package-features li.included::before {
+  content: '';
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  background: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='5 10 8.5 13.5 15 7'/%3E%3C/svg%3E");
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.package-features li.not-included { opacity: 0.35; }
+.package-features li.not-included::before {
+  content: '';
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  background: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'%3E%3Cline x1='6' y1='6' x2='14' y2='14'/%3E%3Cline x1='14' y1='6' x2='6' y2='14'/%3E%3C/svg%3E");
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 /* Request Form */
 .request-section { margin-top: 80px; }
@@ -944,7 +970,7 @@ body:has(.btn:hover, a:hover, button:hover) .cursor-ring {
   .package-card { padding: 32px 24px; border-radius: 1.5rem; }
   .package-credits { font-size: 2.5rem; }
   .package-price { font-size: 1.5rem; }
-  .package-features li { padding: 10px 0; font-size: 0.85rem; }
+  .package-features li { padding: 10px 0; font-size: 0.85rem; gap: 12px; }
   .request-section { margin-top: 48px; }
   .request-form-wrap { padding: 24px 20px; border-radius: 1.5rem; margin-top: 32px; }
   .form-input, .form-select, .form-textarea { padding: 14px 16px; font-size: 0.9rem; border-radius: 0.75rem; }
