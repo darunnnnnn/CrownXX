@@ -1,5 +1,6 @@
 import './style.css';
 import { initRouter } from './js/router.js';
+import { initRegion } from './js/region.js';
 
 // Navbar scroll effect
 const navbar = document.getElementById('navbar');
@@ -21,3 +22,6 @@ navLinks.querySelectorAll('.nav-link').forEach(link => {
 
 // Init router
 initRouter();
+
+// Region switcher (navbar pill + first-visit picker)
+initRegion();
